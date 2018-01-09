@@ -219,7 +219,7 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text="".join(a)))
 
-    if event.message.text == "買入週選價平勒式":
+    if event.message.text == "買入週選價平上下兩檔勒式":
 
         df=MyMod.opweek()
         content=MyMod.square(df)
@@ -246,7 +246,7 @@ def handle_message(event):
                     ),
                     MessageTemplateAction(
                         label='勒式勿賭',
-                        text='買入月選價平勒式'
+                        text='買入月選價平上下兩檔勒式'
                     ),
                     MessageTemplateAction(
                         label='多頭價差',
